@@ -3,9 +3,9 @@ package de.openhpi.capstone1.team23.view;
 import de.openhpi.capstone1.team23.model.Counter;
 import processing.core.PApplet;
 
-public class CounterViewColor extends AbstractCounterView {
+public class BreakoutViewBricks extends AbstractBreakoutView {
 	
-	public CounterViewColor(PApplet display, Counter counter) {
+	public BreakoutViewBricks(PApplet display, Counter counter) {
 		super(display, counter);
 	}
 	

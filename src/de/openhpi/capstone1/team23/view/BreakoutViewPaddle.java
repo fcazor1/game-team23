@@ -3,12 +3,10 @@ package de.openhpi.capstone1.team23.view;
 import de.openhpi.capstone1.team23.model.Counter;
 import processing.core.PApplet;
 
-public class CounterViewMove extends AbstractCounterView { 
-		
-	public CounterViewMove(PApplet display, Counter counter) {
+public class BreakoutViewPaddle extends AbstractBreakoutView {
+	public BreakoutViewPaddle(PApplet display, Counter counter) {
 		super(display, counter);
 	}
-	
 	public void update() {
 		try {
 			int x = counter.getCount();
