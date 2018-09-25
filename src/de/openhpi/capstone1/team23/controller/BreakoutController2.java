@@ -2,16 +2,16 @@ package de.openhpi.capstone1.team23.controller;
 
 import de.openhpi.capstone1.team23.model.Breakout;
 
-public class BreakoutController implements Controller {
+public class BreakoutController2 implements Controller{
 
 	Breakout counter;
 	
-	public BreakoutController(Breakout counter) { 
+	public BreakoutController2(Breakout counter) {
 		this.counter = counter;
 	}
 	
+	@Override
 	public void handleEvent() {
-		counter.updateCount(5);
+		counter.updateCount(30);
 	}
-
 }

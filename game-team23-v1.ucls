@@ -6,54 +6,12 @@
     <position height="-1" width="-1" x="146" y="149"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <class id="2" language="java" name="de.openhpi.capstone1.team23.view.AbstractView" project="capstone1-gameTeam23" 
-    file="/capstone1-gameTeam23/src/de/openhpi/capstone1/team23/view/AbstractView.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="480" y="495"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="3" language="java" name="de.openhpi.capstone1.team23.controller.CounterController2" 
-    project="capstone1-gameTeam23" 
-    file="/capstone1-gameTeam23/src/de/openhpi/capstone1/team23/controller/CounterController2.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1237" y="559"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <package id="4" language="java" name="de.openhpi.capstone1.team23.view" project="capstone1-gameTeam23" 
+  <package id="2" language="java" name="de.openhpi.capstone1.team23.view" project="capstone1-gameTeam23" 
     file="/capstone1-gameTeam23/src/de/openhpi/capstone1/team23/view" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="381" y="63"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <class id="5" language="java" name="de.openhpi.capstone1.team23.view.CounterViewNumber" project="capstone1-gameTeam23" 
-    file="/capstone1-gameTeam23/src/de/openhpi/capstone1/team23/view/CounterViewNumber.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="99" width="212" x="43" y="791"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="6" language="java" name="de.openhpi.capstone1.team23.view.AbstractCounterView" 
-    project="capstone1-gameTeam23" 
-    file="/capstone1-gameTeam23/src/de/openhpi/capstone1/team23/view/AbstractCounterView.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="480" y="679"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="7" language="java" name="de.openhpi.capstone1.team23.builder.GUIComponent" project="capstone1-gameTeam23" 
+  <class id="3" language="java" name="de.openhpi.capstone1.team23.builder.GUIComponent" project="capstone1-gameTeam23" 
     file="/capstone1-gameTeam23/src/de/openhpi/capstone1/team23/builder/GUIComponent.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="728" y="196"/>    
@@ -63,19 +21,9 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="de.openhpi.capstone1.team23.view.CounterViewColor" project="capstone1-gameTeam23" 
-    file="/capstone1-gameTeam23/src/de/openhpi/capstone1/team23/view/CounterViewColor.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="99" width="200" x="536" y="791"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="9" language="java" name="de.openhpi.capstone1.team23.builder.InteractiveCounterBuilder" 
+  <class id="4" language="java" name="de.openhpi.capstone1.team23.builder.InteractiveBreakoutBuilder" 
     project="capstone1-gameTeam23" 
-    file="/capstone1-gameTeam23/src/de/openhpi/capstone1/team23/builder/InteractiveCounterBuilder.java" binary="false" 
+    file="/capstone1-gameTeam23/src/de/openhpi/capstone1/team23/builder/InteractiveBreakoutBuilder.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="957" y="289"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -84,45 +32,12 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="10" language="java" name="de.openhpi.capstone1.team23.controller.Controller" 
-    project="capstone1-gameTeam23" 
-    file="/capstone1-gameTeam23/src/de/openhpi/capstone1/team23/controller/Controller.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1349" y="64"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
-  <class id="11" language="java" name="de.openhpi.capstone1.team23.controller.CounterController" 
-    project="capstone1-gameTeam23" 
-    file="/capstone1-gameTeam23/src/de/openhpi/capstone1/team23/controller/CounterController.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1407" y="675"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <package id="12" language="java" name="de.openhpi.capstone1.team23.controller" project="capstone1-gameTeam23" 
+  <package id="5" language="java" name="de.openhpi.capstone1.team23.controller" project="capstone1-gameTeam23" 
     file="/capstone1-gameTeam23/src/de/openhpi/capstone1/team23/controller" binary="false" corner="BOTTOM_RIGHT">    
     <position height="50" width="253" x="512" y="37"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <class id="13" language="java" name="de.openhpi.capstone1.team23.controller.CounterControllerStrategy" 
-    project="capstone1-gameTeam23" 
-    file="/capstone1-gameTeam23/src/de/openhpi/capstone1/team23/controller/CounterControllerStrategy.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1032" y="478"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="14" language="java" name="de.openhpi.capstone1.team23.builder.Builder" project="capstone1-gameTeam23" 
+  <interface id="6" language="java" name="de.openhpi.capstone1.team23.builder.Builder" project="capstone1-gameTeam23" 
     file="/capstone1-gameTeam23/src/de/openhpi/capstone1/team23/builder/Builder.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="941" y="92"/>    
@@ -132,43 +47,14 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="15" language="java" name="de.openhpi.capstone1.team23.starter.TheApp" project="capstone1-gameTeam23" 
-    file="/capstone1-gameTeam23/src/de/openhpi/capstone1/team23/starter/TheApp.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="126" y="427"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="16" language="java" name="de.openhpi.capstone1.team23.view.CounterViewMove" project="capstone1-gameTeam23" 
-    file="/capstone1-gameTeam23/src/de/openhpi/capstone1/team23/view/CounterViewMove.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="99" width="201" x="295" y="791"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="17" language="java" name="de.openhpi.capstone1.team23.starter.Main" project="capstone1-gameTeam23" 
-    file="/capstone1-gameTeam23/src/de/openhpi/capstone1/team23/starter/Main.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="125" y="252"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <package id="18" language="java" name="de.openhpi.capstone1.team23.model" project="capstone1-gameTeam23" 
+  <package id="7" language="java" name="de.openhpi.capstone1.team23.model" project="capstone1-gameTeam23" 
     file="/capstone1-gameTeam23/src/de/openhpi/capstone1/team23/model" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="137" y="62"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <class id="19" language="java" name="de.openhpi.capstone1.team23.builder.InteractiveCounter" 
+  <class id="8" language="java" name="de.openhpi.capstone1.team23.builder.InteractiveBreakout" 
     project="capstone1-gameTeam23" 
-    file="/capstone1-gameTeam23/src/de/openhpi/capstone1/team23/builder/InteractiveCounter.java" binary="false" 
+    file="/capstone1-gameTeam23/src/de/openhpi/capstone1/team23/builder/InteractiveBreakout.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="727" y="522"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -177,7 +63,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="20" language="java" name="de.openhpi.capstone1.team23.builder.InteractiveComponent" 
+  <class id="9" language="java" name="de.openhpi.capstone1.team23.builder.InteractiveComponent" 
     project="capstone1-gameTeam23" 
     file="/capstone1-gameTeam23/src/de/openhpi/capstone1/team23/builder/InteractiveComponent.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -188,157 +74,26 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="21" language="java" name="de.openhpi.capstone1.team23.model.Counter" project="capstone1-gameTeam23" 
-    file="/capstone1-gameTeam23/src/de/openhpi/capstone1/team23/model/Counter.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="888" y="811"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <realization id="22">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="10"/>  
-  </realization>  
-  <association id="23">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="24" name="iCounter">        
-        <position height="0" width="0" x="-91" y="5"/>      
-      </attribute>      
-      <multiplicity id="25" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-91" y="5"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="19" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="26">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="27" name="counterController2">        
-        <position height="18" width="97" x="1187" y="138"/>      
-      </attribute>      
-      <multiplicity id="28" minimum="0" maximum="1">        
-        <position height="0" width="0" x="215" y="-767"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="29">    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="20"/>  
-  </generalization>  
-  <realization id="30">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="14"/>  
-  </realization>  
-  <association id="31">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="32" name="counter">        
-        <position height="0" width="0" x="31" y="-47"/>      
-      </attribute>      
-      <multiplicity id="33" minimum="0" maximum="1">        
-        <position height="0" width="0" x="31" y="-47"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="21" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="34">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="6"/>  
-  </generalization>  
-  <generalization id="35">    
+  <generalization id="10">    
     <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <realization id="11">    
+    <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="6"/>  
-  </generalization>  
-  <association id="36">    
-    <bendpoint x="1093" y="74"/>    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="37" name="counterController1">        
-        <position height="0" width="0" x="215" y="-767"/>      
-      </attribute>      
-      <multiplicity id="38" minimum="0" maximum="1">        
-        <position height="0" width="0" x="215" y="-767"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="39">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="40" name="counter">        
-        <position height="0" width="0" x="31" y="-47"/>      
-      </attribute>      
-      <multiplicity id="41" minimum="0" maximum="1">        
-        <position height="0" width="0" x="31" y="-47"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="21" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="42">    
-    <bendpoint x="734" y="680"/>    
-    <end type="SOURCE" refId="19" navigable="false">      
-      <attribute id="43" name="counter">        
-        <position height="0" width="0" x="31" y="-47"/>      
-      </attribute>      
-      <multiplicity id="44" minimum="0" maximum="1">        
-        <position height="0" width="0" x="31" y="-47"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="21" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="45">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="46" name="counter">        
-        <position height="0" width="0" x="31" y="-47"/>      
-      </attribute>      
-      <multiplicity id="47" minimum="0" maximum="1">        
-        <position height="0" width="0" x="31" y="-47"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="21" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="48">    
-    <end type="SOURCE" refId="19" navigable="false">      
-      <attribute id="49" name="counterControllerStrategy">        
-        <position height="0" width="0" x="-301" y="-169"/>      
-      </attribute>      
-      <multiplicity id="50" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-301" y="-169"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="13" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="51">    
-    <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="52" name="views">        
-        <position height="0" width="0" x="-46" y="-4"/>      
-      </attribute>      
-      <multiplicity id="53" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="-46" y="-4"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="54">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <generalization id="55">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="6"/>  
-  </generalization>  
-  <realization id="56">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="10"/>  
   </realization>  
+  <association id="12">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="13" name="iCounter">        
+        <position height="0" width="0" x="-91" y="5"/>      
+      </attribute>      
+      <multiplicity id="14" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-91" y="5"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

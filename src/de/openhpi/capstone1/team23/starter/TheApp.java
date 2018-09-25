@@ -1,14 +1,14 @@
 package de.openhpi.capstone1.team23.starter;
 
 
-import de.openhpi.capstone1.team23.builder.GUIComponent;
-import de.openhpi.capstone1.team23.builder.InteractiveComponent;
-import de.openhpi.capstone1.team23.builder.InteractiveCounterBuilder;
+import de.openhpi.capstone1.counter.builder.GUIComponent;
+import de.openhpi.capstone1.counter.builder.InteractiveComponent;
+import de.openhpi.capstone1.counter.builder.InteractiveCounterBuilder;
 import processing.core.PApplet;
 
 public class TheApp extends PApplet {
 
-	InteractiveComponent interactiveBreakout;
+	InteractiveComponent interactiveCounter;
 
 	@Override
 	public void settings() {
@@ -20,7 +20,7 @@ public class TheApp extends PApplet {
 		frameRate(30);
 		InteractiveCounterBuilder builder = new InteractiveCounterBuilder();
 		GUIComponent.construct(this, builder);
-		interactiveBreakout = builder.getComponent();
+		interactiveCounter = builder.getComponent();
 	}
 
 	@Override
@@ -28,11 +28,11 @@ public class TheApp extends PApplet {
 		background(204);
 		fill(255);
 		rect(random(100),random(100), 10, 10);
-		interactiveBreakout.update();
+		interactiveCounter.update();
 	}
 	
 	@Override
 	public void mouseClicked() {
-		interactiveBreakout.handleEvent();
+		interactiveCounter.handleEvent();
 	}
 }

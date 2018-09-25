@@ -2,13 +2,13 @@ package de.openhpi.capstone1.team23.builder;
 
 import processing.core.PApplet;
 
-public class InteractiveCounterBuilder implements Builder {
+public class InteractiveBreakoutBuilder implements Builder {
 
-	InteractiveCounter iCounter;
+	InteractiveBreakout iCounter;
 	
 	@Override
 	public void buildComponent() {
-		iCounter = new InteractiveCounter();
+		iCounter = new InteractiveBreakout();
 	}
 
 	@Override

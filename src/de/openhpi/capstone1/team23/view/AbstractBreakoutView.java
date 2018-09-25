@@ -1,21 +1,15 @@
 package de.openhpi.capstone1.team23.view;
 
-import de.openhpi.capstone1.team23.model.Bricks;
-import de.openhpi.capstone1.team23.model.Paddle;
-import de.openhpi.capstone1.team23.model.Wheel;
+import de.openhpi.capstone1.counter.model.Counter;
 import processing.core.PApplet;
 
 public abstract class AbstractBreakoutView extends AbstractView {
 
-	protected Paddle paddle;
-	protected Wheel wheel;
-	protected Bricks bricks;
-	
-	public AbstractBreakoutView(PApplet display, Paddle paddle, Wheel wheel, Bricks bricks) {
+	protected Counter counter;
+
+	public AbstractBreakoutView(PApplet display, Counter counter) {
 		super(display);
-		this.paddle = paddle;
-		this.wheel = wheel;
-		this.bricks = bricks;
+		this.counter = counter;
 	}
-	
+
 }

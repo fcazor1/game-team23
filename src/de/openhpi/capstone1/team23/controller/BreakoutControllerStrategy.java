@@ -1,28 +1,26 @@
 package de.openhpi.capstone1.team23.controller;
 
-import de.openhpi.capstone1.team23.model.Bricks;
+import de.openhpi.capstone1.team23.model.Breakout;
 
 public class BreakoutControllerStrategy {
-
-		private Controller breakoutController1;
-		private Controller breakoutController2;
-		private boolean largeStep = false;
-		
-		public BreakoutControllerStrategy(Bricks counter) {
-			this.breakoutController1 = new BreakoutController(counter);
-			this.breakoutController2 = new BreakoutController2(counter);
-		}
-		
-		public void handleEvent() {
-			if (largeStep == true) {
-				breakoutController1.handleEvent();
-				largeStep = false;
-			} else {
-				breakoutController2.handleEvent();
-				largeStep = true;
-			}
-		}
-		
-
+	private Controller counterController1;
+	private Controller counterController2;
+	private boolean largeStep = false;
+	
+	public BreakoutControllerStrategy(Breakout counter) {
+		this.counterController1 = new BreakoutController(counter);
+		this.counterController2 = new BreakoutController2(counter);
 	}
+	
+	public void handleEvent() {
+		if (largeStep == true) {
+			counterController1.handleEvent();
+			largeStep = false;
+		} else {
+			counterController2.handleEvent();
+			largeStep = true;
+		}
+	}
+	
 
+}
