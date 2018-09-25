@@ -11,7 +11,7 @@ public class BreakoutViewPaddle extends AbstractBreakoutView {
 	
 	public void update() {
 		try {
-			int x = counter.getCount();
+			int x = counter.getPaddleXpos();
 			display.fill(0);
 			display.rect(x, 370, 30, 10);
 		} catch (ClassCastException e) {

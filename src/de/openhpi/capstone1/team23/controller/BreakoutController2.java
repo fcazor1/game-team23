@@ -14,4 +14,10 @@ public class BreakoutController2 implements Controller{
 	public void handleEvent() {
 		counter.updateCount(30);
 	}
+
+	@Override
+	public void handleEvent2(int key) {
+		// TODO Auto-generated method stub
+		
+	}
 }

@@ -33,4 +33,8 @@ public class InteractiveBreakout extends InteractiveComponent {
 	public void handleEvent() {
 		breakoutControllerStrategy.handleEvent();
 	}
+	
+	public void handleEvent2(int key){
+		breakoutControllerStrategy.handleEvent2(key);
+	}
 }

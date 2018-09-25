@@ -14,4 +14,7 @@ public class BreakoutController implements Controller {
 		counter.updateCount(1);
 	}
 
+	public void handleEvent2(int key) {
+		counter.updatePaddle(key);
+	}
 }

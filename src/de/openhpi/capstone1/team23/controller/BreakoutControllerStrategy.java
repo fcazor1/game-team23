@@ -22,5 +22,7 @@ public class BreakoutControllerStrategy {
 		}
 	}
 	
-
+	public void handleEvent2(int key) {
+			counterController1.handleEvent2(key);
+	}
 }

@@ -8,7 +8,7 @@ import processing.core.PApplet;
 
 public class TheApp extends PApplet {
 
-	InteractiveComponent interactiveCounter;
+	InteractiveComponent interactiveBreakout;
 
 	@Override
 	public void settings() {
@@ -20,7 +20,7 @@ public class TheApp extends PApplet {
 		frameRate(30);
 		InteractiveBreakoutBuilder builder = new InteractiveBreakoutBuilder();
 		GUIComponent.construct(this, builder);
-		interactiveCounter = builder.getComponent();
+		interactiveBreakout = builder.getComponent();
 	}
 
 	@Override
@@ -28,11 +28,19 @@ public class TheApp extends PApplet {
 		background(204);
 		fill(255);
 		rect(random(100),random(100), 10, 10);
-		interactiveCounter.update();
+		interactiveBreakout.update();
 	}
 	
 	@Override
 	public void mouseClicked() {
-		interactiveCounter.handleEvent();
+		interactiveBreakout.handleEvent();
 	}
+	
+	@Override
+	public void keyPressed() {
+		if (keyCode == LEFT)
+        interactiveBreakout.handleEvent2(-1);
+		if (keyCode == RIGHT)
+			interactiveBreakout.handleEvent2(+1);
+    }
 }
