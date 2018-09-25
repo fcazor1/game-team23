@@ -4,15 +4,34 @@ import de.openhpi.capstone1.team23.model.Breakout;
 import processing.core.PApplet;
 
 public class BreakoutViewBrick extends AbstractBreakoutView {
-			
+	
 	public BreakoutViewBrick(PApplet display, Breakout counter) {
 		super(display, counter);
 	}
 	
-	@Override
 	public void update() {
-		display.fill(0);
-		display.textSize(32);
-		display.text(counter.getCount() + "", 10, 30);
+		try {
+			int[] colors = new int[3];
+			
+			int v = 30;
+			
+			colors[0] = (v * 10) % 255;
+			colors[1] = (v * 5) % 255;
+			colors[2] = (v * 20) % 255;
+			
+			display.fill(colors[0], colors[1], colors[2]);
+			display.rect(1, 1, 30, 20);
+			display.rect(30, 1, 30, 20);
+			display.rect(60, 1, 30, 20);
+			display.rect(90, 1, 30, 20);
+			display.rect(120, 1, 30, 20);
+			display.rect(150, 1, 30, 20);
+			display.rect(180, 1, 30, 20);
+			display.rect(210, 1, 30, 20);
+			display.rect(240, 1, 30, 20);
+			display.rect(270, 1, 30, 20);
+		} catch (ClassCastException e) {
+			System.out.println(e.getMessage());
+		}
 	}
 }
