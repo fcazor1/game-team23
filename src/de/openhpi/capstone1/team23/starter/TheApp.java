@@ -18,6 +18,7 @@ public class TheApp extends PApplet {
 	@Override
 	public void setup() {  // setup() runs once
 		frameRate(30);
+		ellipseMode(RADIUS);
 		InteractiveBreakoutBuilder builder = new InteractiveBreakoutBuilder();
 		GUIComponent.construct(this, builder);
 		interactiveBreakout = builder.getComponent();
@@ -27,7 +28,6 @@ public class TheApp extends PApplet {
 	public void draw() {  // draw() loops forever, until stopped
 		background(204);
 		fill(255);
-		rect(random(100),random(100), 10, 10);
 		interactiveBreakout.update();
 	}
 	

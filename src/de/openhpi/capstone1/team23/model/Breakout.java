@@ -11,6 +11,13 @@ public class Breakout {
 	private int paddlexpos = 0;
 	private int MaxPaddleXpos = 270;
 	
+	int rad = 5;        // Width of the shape
+	private float xpos, ypos;    // Starting position of shape 
+	float xspeed = 2.8f;  // Speed of the shape
+	float yspeed = 2.2f;  // Speed of the shape
+	int xdirection = 1;  // Left or Right
+	int ydirection = 1;  // Top to Bottom
+
 	public Breakout(){
 		for( int i=0; i<filas; i++)
 			for (int j=0; j<columnas; j++)
@@ -44,5 +51,38 @@ public class Breakout {
 	}
 	public int getPaddleXpos(){
 		return paddlexpos;
+	}
+	public float getWheelXpos(){
+		return xpos;
+	}
+	public float getWheelYpos(){
+		return ypos;
+	}
+	public void setWheelXpos(float x){
+		xpos = x;
+	}
+	public void setWheelYpos(float y){
+		ypos = y;
+	}
+	public float getXspeed(){
+		return xspeed;
+	}
+	public float getYspeed(){
+		return yspeed;
+	}
+	public int getXdirection(){
+		return xdirection;
+	}
+	public int getYdirection(){
+		return ydirection;
+	}
+	public int getRad(){
+		return rad;
+	}
+	public void setXdirection(int xdir){
+		xdirection = xdir;
+	}
+	public void setYdirection(int ydir){
+		ydirection = ydir;
 	}
 }
