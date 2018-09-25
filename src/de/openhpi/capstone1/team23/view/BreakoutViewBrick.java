@@ -1,11 +1,11 @@
 package de.openhpi.capstone1.team23.view;
 
-import de.openhpi.capstone1.counter.model.Counter;
+import de.openhpi.capstone1.team23.model.Breakout;
 import processing.core.PApplet;
 
 public class BreakoutViewBrick extends AbstractBreakoutView {
 			
-	public BreakoutViewBrick(PApplet display, Counter counter) {
+	public BreakoutViewBrick(PApplet display, Breakout counter) {
 		super(display, counter);
 	}
 	

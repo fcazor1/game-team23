@@ -20,9 +20,9 @@ public class InteractiveBreakout extends InteractiveComponent {
 	
 	public void createViews(PApplet applet) {
 		views = new AbstractView[3];
-		views[0] = new CounterViewPaddle(applet, counter);
-		views[1] = new CounterViewWheel(applet, counter);
-		views[2] = new CounterViewBricks(applet, counter);
+		views[0] = new BreakoutViewPaddle(applet, counter);
+		views[1] = new BreakoutViewWheel(applet, counter);
+		views[2] = new BreakoutViewBrick(applet, counter);
 	}
 	
 	public void addController() {

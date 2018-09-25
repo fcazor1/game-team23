@@ -1,6 +1,6 @@
 package de.openhpi.capstone1.team23.builder;
 
-import de.openhpi.capstone1.counter.view.AbstractView;
+import de.openhpi.capstone1.team23.view.AbstractView;
 
 public abstract class InteractiveComponent {
 	public abstract void handleEvent();
