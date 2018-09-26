@@ -20,28 +20,54 @@ public class BreakoutViewWheel extends AbstractBreakoutView {
 		int xdirection = counter.getXdirection();
 		int ydirection = counter.getYdirection();
 		int rad = counter.getRad();
-		xpos = xpos + ( counter.getXspeed() * xdirection );
-		ypos = ypos + ( counter.getYspeed() * ydirection );
-		counter.setWheelXpos(xpos);
-		counter.setWheelYpos(ypos);
+		int b;
+		float yMin = counter.getYboundaryOver(xpos, ypos-rad-2f);
+		if(ypos-rad-2f<counter.getFilas()*20+1)
+		if (ypos-rad<=yMin+8){
+			b = counter.getBrick(xpos, ypos-rad-2f);
+			if(b>0){
+				xpos = xpos + ( counter.getXspeed() * xdirection );
+				ypos = ypos + ( counter.getYspeed() * ydirection );
+				counter.setWheelXpos(xpos);
+				counter.setWheelYpos(ypos);
+				xdirection *= -1;
+			    counter.setXdirection(xdirection);
+			}
+		}
+		if (ypos<393){
+			xpos = xpos + ( counter.getXspeed() * xdirection );
+			ypos = ypos + ( counter.getYspeed() * ydirection );
+			counter.setWheelXpos(xpos);
+			counter.setWheelYpos(ypos);
+		}else{
+			//counter.updateCount(-1);
+		}
 		
 		// Test to see if the shape exceeds the boundaries of the screen
 		// If it does, reverse its direction by multiplying by -1
-		if (xpos > display.width-rad || xpos < rad) {
+		if (xpos > display.width-rad || xpos < rad ) {
 		    xdirection *= -1;
 		    counter.setXdirection(xdirection);
 		}
-		if (ypos > display.height-rad || ypos < rad) {
+			
+		int x = counter.getPaddleXpos();
+		if (ypos>360)
+			if (xpos > x && xpos < x+30){
+				ydirection *= -1;
+				counter.setYdirection(ydirection);
+			}
+				
+		if (ypos > display.height-rad || ypos < rad ) { // || ypos < counter.getFilas()*20+5 ) {
 		    ydirection *= -1;
 		    counter.setYdirection(ydirection);
 		}
-		  
 		// Draw the shape
-		display.ellipse(xpos, ypos, rad, rad); 
+		display.fill(255);
+		display.ellipse(xpos, ypos, rad, rad);		
 		  
 		display.fill(0);
-		display.textSize(32);
-		display.text(counter.getCount() + "", 10, 30);
-		display.fill(255);
+		display.textSize(12);
+		if(yMin>0)
+		display.text(yMin, 10, 30);
 	}
 }

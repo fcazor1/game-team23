@@ -1,15 +1,13 @@
 package de.openhpi.capstone1.team23.model;
 
-import processing.event.KeyEvent;
-
 public class Breakout {
 
 	private int count = 0;
-	private int filas = 2;
+	private int filas = 4;
 	private int columnas = 10;
 	private int[][] bricks = new int[filas][columnas];
-	private int paddlexpos = 0;
 	private int MaxPaddleXpos = 270;
+	private int paddlexpos = MaxPaddleXpos/2;
 	
 	int rad = 5;        // Width of the shape
 	private float xpos, ypos;    // Starting position of shape 
@@ -84,5 +82,35 @@ public class Breakout {
 	}
 	public void setYdirection(int ydir){
 		ydirection = ydir;
+	}
+	public int getBrick(float x, float y){
+		for( int i=filas-1; i>-1; i--)
+			for (int j=0; j<=columnas; j++){
+				int n = 1+j*30;
+				int m = 1+i*20;
+				if( x > n && x < (n + 30) && y > m && y < (m + 20)){
+					if(bricks[i][j] == 1){
+						bricks[i][j] = 0;
+						return j;
+					} else
+						return 0;
+				}
+		          
+			}
+		return 0;
+	}
+	public float getYboundaryOver(float x, float y){
+		float yover = 0;
+		if (y<=filas*20+1){
+			for( int i=filas-1; i>-1; i--)
+				for (int j=0; j<columnas-1; j++){
+					int n = 1+j*30;
+					if(bricks[i][j] == 1 && x > n && x < (n + 30)){
+						yover = 1+(i+1)*20;
+						return yover;
+					}
+				}
+		}	
+		return yover;
 	}
 }

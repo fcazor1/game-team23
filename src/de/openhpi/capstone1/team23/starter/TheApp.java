@@ -17,7 +17,7 @@ public class TheApp extends PApplet {
 
 	@Override
 	public void setup() {  // setup() runs once
-		frameRate(30);
+		frameRate(20);
 		ellipseMode(RADIUS);
 		InteractiveBreakoutBuilder builder = new InteractiveBreakoutBuilder();
 		GUIComponent.construct(this, builder);

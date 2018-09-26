@@ -16,7 +16,7 @@ public class BreakoutViewBrick extends AbstractBreakoutView {
 			
 			int[] colors = new int[3];
 			
-			int v = 30;
+			int v = 40;
 			
 			colors[0] = (v * 10) % 255;
 			colors[1] = (v * 5) % 255;
@@ -28,9 +28,9 @@ public class BreakoutViewBrick extends AbstractBreakoutView {
 			for(int i=0;i<counter.getFilas();i++){
 				for(int j=0;j<counter.getColumnas();j++){
 					if(x[i][j]==1){
-						ypos = 1+j*30;
-						xpos = 1+i*20;
-						display.rect(ypos, xpos, 30, 20);
+						ypos = 1+i*20;
+						xpos = 1+j*30;
+						display.rect(xpos, ypos, 30, 20);
 					}
 				}
 			}
