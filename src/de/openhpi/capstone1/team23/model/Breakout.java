@@ -3,18 +3,25 @@ package de.openhpi.capstone1.team23.model;
 public class Breakout {
 
 	private int count = 0;
-	private int filas = 4;
-	private int columnas = 10;
-	private int[][] bricks = new int[filas][columnas];
-	private int MaxPaddleXpos = 270;
-	private int paddlexpos = MaxPaddleXpos/2;
+	private int filas = 4; // Number of rows of bricks
+	private int columnas = 10; // Number of columns of bricks
+	private int[][] bricks = new int[filas][columnas]; // Array of bricks
+	private int MaxPaddleXpos = 270; // Max horizontal movement of left edge of paddle 
+	private int VerticalPaddlePos = 370; // Fixed vertical position of paddle
+	private int paddlexpos = MaxPaddleXpos/2; // Horizontal position of center point of paddle
+	private int paddleWidth = 30; // Paddle width
+	private int paddleHigh = 10; // Paddle high
+	private int ballsRemaining = 3; // number of initial balls in the game
 	
-	int rad = 5;        // Width of the shape
-	private float xpos, ypos;    // Starting position of shape 
-	float xspeed = 2.8f;  // Speed of the shape
-	float yspeed = 2.2f;  // Speed of the shape
+	int rad = 3;        // Width of the wheel
+	private float xpos, ypos;    // Starting position of wheel 
+	float xspeed = 2.8f;  // Speed of the wheel
+	float yspeed = 2.2f;  // Speed of the wheel
 	int xdirection = 1;  // Left or Right
 	int ydirection = 1;  // Top to Bottom
+	
+	boolean newBallEvent = false;
+	boolean gameOver = false;
 
 	public Breakout(){
 		for( int i=0; i<filas; i++)
@@ -34,7 +41,15 @@ public class Breakout {
         if (paddlexpos>MaxPaddleXpos)
         	paddlexpos = MaxPaddleXpos;
 	}
-	
+	public void newBall(){
+		newBallEvent = true;
+	}
+	public boolean isNewBallEvent(){
+		return newBallEvent;
+	}
+	public void setStartNewBallMove(){
+		newBallEvent = false;
+	}
 	public int getCount() {
 		return this.count;
 	}
@@ -85,17 +100,18 @@ public class Breakout {
 	}
 	public int getBrick(float x, float y){
 		for( int i=filas-1; i>-1; i--)
-			for (int j=0; j<=columnas; j++){
-				int n = 1+j*30;
-				int m = 1+i*20;
-				if( x > n && x < (n + 30) && y > m && y < (m + 20)){
+			for (int j=0; j<columnas; j++){
+				float n = 1f+j*30f;
+				float m = 1f+i*20f;
+		        if(x > 270f && x < 301f && y > 60f && y < 81f)
+		        	return -1;
+				if( x > n && x < (n + 30f) && y > m && y < (m + 20f)){
 					if(bricks[i][j] == 1){
 						bricks[i][j] = 0;
 						return j;
 					} else
 						return 0;
 				}
-		          
 			}
 		return 0;
 	}
@@ -105,12 +121,33 @@ public class Breakout {
 			for( int i=filas-1; i>-1; i--)
 				for (int j=0; j<columnas-1; j++){
 					int n = 1+j*30;
-					if(bricks[i][j] == 1 && x > n && x < (n + 30)){
-						yover = 1+(i+1)*20;
+					if(bricks[i][j] == 1 && x > n && x < (n + 30f)){
+						yover = 1f+(i+1)*20f;
 						return yover;
 					}
 				}
 		}	
 		return yover;
+	}
+	public int getPaddleVerticalPos(){
+		return VerticalPaddlePos;
+	}
+	public int getPaddleWidth(){
+		return paddleWidth;
+	}
+	public int getPaddleHigh(){
+		return paddleHigh;
+	}
+	public void consumeBall(){
+		ballsRemaining -= 1;
+	}
+	public int getBallsRemaining(){
+		return ballsRemaining;
+	}
+	public void setGameOver(){
+		gameOver = true;
+	}
+	public boolean isGameOver(){
+		return gameOver;
 	}
 }

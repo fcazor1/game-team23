@@ -42,5 +42,7 @@ public class TheApp extends PApplet {
         interactiveBreakout.handleEvent2(-1);
 		if (keyCode == RIGHT)
 			interactiveBreakout.handleEvent2(+1);
+		if (keyCode == ' ')
+			interactiveBreakout.handleEvent2(0);
     }
 }

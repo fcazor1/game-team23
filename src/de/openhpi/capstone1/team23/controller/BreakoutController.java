@@ -15,6 +15,9 @@ public class BreakoutController implements Controller {
 	}
 
 	public void handleEvent2(int key) {
-		counter.updatePaddle(key);
+		if (key==-1||key==+1)
+			counter.updatePaddle(key);
+		else if (key==0)
+			counter.newBall();
 	}
 }
