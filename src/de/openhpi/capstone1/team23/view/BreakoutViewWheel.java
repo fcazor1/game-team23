@@ -14,6 +14,16 @@ public class BreakoutViewWheel extends AbstractBreakoutView {
 	@Override
 	public void update() {
 		
+		if (counter.isGameWin()){
+			display.noStroke();
+			display.fill(204);
+			display.rect(25, 180, 240, 55, 0);
+			display.stroke(0);
+			display.fill(255,0,0);
+			display.textSize(12);
+			display.text("You win!", 110, 200);
+			return;
+		}
 		if (counter.isGameOver()){
 			display.noStroke();
 			display.fill(204);
@@ -28,36 +38,29 @@ public class BreakoutViewWheel extends AbstractBreakoutView {
 		// Update the position of the wheel
 		float xpos = counter.getWheelXpos();
 		float ypos = counter.getWheelYpos();
-		int xdirection = counter.getXdirection();
-		int ydirection = counter.getYdirection();
+		float xdirection = counter.getXdirection();
+		float ydirection = counter.getYdirection();
 		int rad = counter.getRad();
+		float yMin = counter.getYboundaryOver(xpos, ypos); //-rad-2f);
 		int b;
-		float yMin = counter.getYboundaryOver(xpos, ypos-rad-2f);
-		if(ypos-rad<counter.getFilas()*20+1)
-		if (ypos-rad<=yMin+8){
-			b = counter.getBrick(xpos+rad, ypos-rad);
-			if(b>0){
-				xpos = xpos + ( counter.getXspeed() * xdirection );
-				ypos = ypos + ( counter.getYspeed() * ydirection );
-				counter.setWheelXpos(xpos);
-				counter.setWheelYpos(ypos);
-				xdirection *= -1;
-			    counter.setXdirection(xdirection);
+		if(ypos<counter.getFilas()*20+1)
+			if (ypos-rad<=yMin+8){
+				b = counter.getBrick(xpos+rad, ypos-rad);
+				if(b>0){
+					xpos = xpos + ( counter.getXspeed() * xdirection );
+					ypos = ypos + ( counter.getYspeed() * ydirection );
+					counter.setWheelXpos(xpos);
+					counter.setWheelYpos(ypos);
+					xdirection *= -1;
+				    counter.setXdirection(xdirection);
+				}
 			}
-			if (b<0){
-				display.fill(255,0,0);
-	        	display.textSize(12);
-	        	display.text(yMin, 10, 100);
-	        	display.delay(2000);
-			}
-		}
+		
 		if (ypos<393){
 			xpos = xpos + ( counter.getXspeed() * xdirection );
 			ypos = ypos + ( counter.getYspeed() * ydirection );
 			counter.setWheelXpos(xpos);
 			counter.setWheelYpos(ypos);
-		}else{
-			//counter.updateCount(-1);
 		}
 		
 		// Test to see if the shape exceeds the boundaries of the screen
@@ -74,7 +77,10 @@ public class BreakoutViewWheel extends AbstractBreakoutView {
 		if (ypos>(h-0.7f))
 			if (xpos > x && xpos < x+w){
 				ydirection *= -1;
+				float xhit = xpos - x; 
+				float xs = ( -1.2f /(w*w) * (xhit*xhit) + 1.2f / w * xhit + 0.7f );
 				counter.setYdirection(ydirection);
+				counter.setXspeed(counter.getXspeed()*xs);
 			}
 				
 		if (ypos > display.height-rad || ypos < rad ) {
@@ -106,6 +112,17 @@ public class BreakoutViewWheel extends AbstractBreakoutView {
 			display.text("Game over!", 110, 200);
 			counter.setGameOver();
 		}
+		if(counter.getNumBricks()==0){
+			display.noStroke();
+			display.fill(204);
+			display.rect(25, 180, 240, 55, 0);
+			display.stroke(0);
+			display.fill(255,0,0);
+			display.textSize(12);
+			display.text("You win!", 110, 200);
+			counter.setGameWin();
+		}
+			
 		// Draw the shape
 		display.fill(255);
 		display.ellipse(xpos, ypos, rad, rad);		
