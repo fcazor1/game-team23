@@ -1,0 +1,11 @@
+/* Requires the Docker Pipeline plugin */
+pipeline {
+    agent { "rpi4n1" }
+    stages {
+        stage('Test rpi4n1') {
+            steps {
+                sh 'echo hola desde rpi4n1'
+            }
+        }
+    }
+}
