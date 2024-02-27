@@ -1,6 +1,6 @@
 /* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { "rpi4n1" }
+    agent {label "rpi4n1" }
     stages {
         stage('Test rpi4n1') {
             steps {
